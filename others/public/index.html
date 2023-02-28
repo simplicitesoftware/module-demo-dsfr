@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-scheme="light">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000091">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link href="dsfr.main.min.css" rel="stylesheet">
+    <script async defer src="main-bundle.js"></script>
+    <script async defer src="dsfr.nomodule.min.js"></script>
+    <title>Démo DSFR</title>
+</head>
+<body>
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand fr-enlarge-link">
+                        <div class="fr-header__brand-top">
+                            <div class="fr-header__logo">
+                                <a href="/" title="Accueil - ministère des démos">
+                                    <p class="fr-logo">
+                                        Ministère
+                                        <br>des démos
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="web-demo" class="fr-container">
+        <h2><br/>Voici les produits :</h2>
+        <div id="web-demo-products">(Chargement...)</div>
+
+        <h2><br/>Pour créer un nouveau produit :</h2>
+        <div id="web-demo-product" class="fr-grid-row fr-grid-row--gutters">
+            <div class="fr-col-sm-12 fr-col-md-6 fr-col-lg-3"><input class="fr-input" type="text" id="web-demo-product-ref" placeholder="REF999"/></div>
+            <div class="fr-col-sm-12 fr-col-md-6 fr-col-lg-3"><input class="fr-input" type="text" id="web-demo-product-name" placeholder="Test product"/></div>
+            <div class="fr-col-sm-12 fr-col-md-6 fr-col-lg-3"><input class="fr-upload" type="file" accept="image/*" id="web-demo-product-picture"/></div>
+            <div class="fr-col-sm-12 fr-col-md-6 fr-col-lg-3"><button class="fr-btn" id="web-demo-product-add">Créer</button></div>
+        </div>
+        <div class="fr-container">&nbsp;</div>
+    </div>
+
+    <footer class="fr-footer" role="contentinfo" id="footer">
+        <div class="fr-container fr-footer__bottom-copy">&copy; Simplicit&eacute; Software</div>
+    </footer>
+</body>
+</html>
