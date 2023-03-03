@@ -10,8 +10,8 @@
 import styles from './styles.less';
 import simplicite from 'simplicite';
 
-const app = simplicite.session(); // No explicit URL needed when deployed in Simplicite
-//const app = simplicite.session({ url: 'https://demo.dev.simplicite.io' }); // Explicit URL needed for a standalone deployment
+const app = simplicite.session(); // Pas d'URL explicite si deployé sur Simplicite
+//const app = simplicite.session({ url: 'https://demo.dev.simplicite.io' }); // URL explicite pour les devs en local
 
 app.info('Version: ' + simplicite.constants.MODULE_VERSION);
 app.debug(app.parameters);
@@ -26,19 +26,15 @@ function elt(id, html) {
 
 app.login({ username: 'website', password: 'simplicite' }).then(function(user) {
 	app.debug('Logged in as ' + user.login);
-	// Get user's details
 	return app.getGrant();
 }).then(function(grant) {
 	app.debug(grant);
 	elt('message', 'Hello ' + grant.getLogin());
-	// Get object
 	prd = app.getBusinessObject('DemoProduct');
-	// Get product object's metadata
 	return prd.getMetaData();
 }).then(function(metadata) {
 	app.debug(metadata);
 	elt('product-add').onclick = function() {
-		// Create new product
 		prd.getForCreate().then(function() {
 			console.log(prd.item);
 			prd.item.demoPrdSupId = 1;

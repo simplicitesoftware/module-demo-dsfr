@@ -9,21 +9,18 @@
     "url": "https://github.com/simplicitesoftware/web-demo.git"
   },
   "dependencies": {
-    "@gouvfr/dsfr": "^1.8.5",
+    "@gouvfr/dsfr": "^1.9.0",
     "simplicite": "^2.2.31"
   },
   "devDependencies": {
     "@ffflorian/jszip-cli": "^3.1.9",
     "acorn": "^8.8.2",
-    "copy": "^0.3.2",
     "css-loader": "^6.7.3",
     "eslint": "^8.35.0",
     "less": "^4.1.3",
     "less-loader": "^11.1.0",
-    "npm-check": "^6.0.1",
     "npm-check-updates": "^16.7.10",
     "postcss-less": "^6.0.0",
-    "serve": "^14.2.0",
     "style-loader": "^3.3.1",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
@@ -34,11 +31,7 @@
   "scripts": {
     "lint": "eslint src/**.js && stylelint src/**.less",
     "start": "webpack serve --config=webpack.config.development.js",
-    "pre": "cp -r node_modules/@gouvfr/dsfr/dist/* public",
-    "build": "webpack --config=webpack.config.production.js",
-    "serve": "serve -p 3000 public",
-    "zip": "rm -f ../resources/ObjectExternal/DemoDSFR/SITE.zip && cd public && jszip-cli add --ignore *.LICENSE.txt --output ../../resources/ObjectExternal/DemoDSFR/SITE.zip . && cd ..",
-    "check": "npm-check --skip-unused",
-    "ncu": "ncu"
+    "build": "webpack --config=webpack.config.production.js && rm -f ../resources/ObjectExternal/DemoDSFR/SITE.zip && cd public && jszip-cli add --ignore *.LICENSE.txt --output ../../resources/ObjectExternal/DemoDSFR/SITE.zip . && cd ..",
+    "check": "npm-check --skip-unused"
   }
 }
