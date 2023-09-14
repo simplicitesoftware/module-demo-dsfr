@@ -10,8 +10,7 @@
 import styles from './styles.less';
 import simplicite from 'simplicite';
 
-const app = simplicite.session(); // Pas d'URL explicite si deployé sur Simplicite
-//const app = simplicite.session({ url: 'https://demo.dev.simplicite.io' }); // URL explicite pour les devs en local
+const app = simplicite.session(process.env.WEBPACK_APP_URL ? { url: process.env.WEBPACK_APP_URL, debug: true } : {});
 
 app.info('Version: ' + simplicite.constants.MODULE_VERSION);
 app.debug(app.parameters);
