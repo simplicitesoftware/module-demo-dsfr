@@ -34,7 +34,7 @@
 		<shc_url><![CDATA[[EXPR:HTMLPage.getPublicExternalObjectURL("DemoDSFR")+"/index.html"]]]></shc_url>
 		<shc_target>_blank</shc_target>
 		<shc_order>133</shc_order>
-		<shc_visible>1</shc_visible>
+		<shc_visible>P;H</shc_visible>
 		<shc_icon>dsfr</shc_icon>
 		<shc_keys/>
 		<row_module_id.mdl_name>DemoDSFR</row_module_id.mdl_name>
