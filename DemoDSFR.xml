@@ -23,7 +23,7 @@
 	<data>
 		<mdk_parent_id.mdl_name>Demo</mdk_parent_id.mdl_name>
 		<row_module_id.mdl_name>DemoDSFR</row_module_id.mdl_name>
-		<mdk_cascad>R</mdk_cascad>
+		<mdk_cascad>C</mdk_cascad>
 	</data>
 </object>
 <object>
