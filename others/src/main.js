@@ -44,9 +44,9 @@ async function display() {
 		l += `<div class="fr-col-sm-12 fr-col-md-6 fr-col-lg-4">\
 			<div class="fr-tile fr-enlarge-link fr-tile--horizontal">\
 				<div class="fr-tile__body">\
-					<h4 class="fr-tile__title">${item.demoPrdName}</h4>\
+					<h4 class="fr-tile__title">${item.demoPrdName} (${item.demoPrdSupId__demoSupCode})</h4>\
 					<h5 class="fr-tile__title">${item.demoPrdReference} (${prd.getFieldListValue('demoPrdType', item)})</h5>\
-					<p class="fr-tile__desc">${item.demoPrdDescription}</p>\
+					<p class="fr-tile__desc">${item.demoPrdDescription || 'No description'}</p>\
 				</div>\
 				<div class="fr-tile__img">${img}</div>\
 			</div>\
@@ -65,7 +65,7 @@ async function save() {
 
 (async () => {
 	try {
-		const user = await app.login({ username: 'website', password: 'simplicite' });
+		const user = await app.login({ username: 'demodsfr', password: 'simplicite' });
 		app.debug(`Connecté en tant que ${user.login}`);
 		const grant = await app.getGrant();
 		app.debug(grant);
@@ -76,7 +76,7 @@ async function save() {
 		elt('product-add').onclick = async () => {
 			const item = await prd.getForCreate();
 			app.debug(item);
-			prd.item.demoPrdSupId = 1;
+			prd.item.demoPrdSupId = 1; // TODO: choosable supplier
 			prd.item.demoPrdType = 'OTHER';
 			prd.item.demoPrdReference = elt('product-ref').value;
 			prd.item.demoPrdName = elt('product-name').value;
