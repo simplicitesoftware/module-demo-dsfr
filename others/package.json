@@ -9,7 +9,7 @@
     "url": "https://github.com/simplicitesoftware/web-demo.git"
   },
   "dependencies": {
-    "@gouvfr/dsfr": "^1.10.2",
+    "@gouvfr/dsfr": "^1.11.0",
     "simplicite": "^3.0.0"
   },
   "devDependencies": {
@@ -18,7 +18,7 @@
     "css-loader": "^6.9.0",
     "eslint": "^8.56.0",
     "less": "^4.2.0",
-    "less-loader": "^11.1.4",
+    "less-loader": "^12.0.0",
     "npm-check-updates": "^16.14.12",
     "postcss-less": "^6.0.0",
     "style-loader": "^3.3.4",
