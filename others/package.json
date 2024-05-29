@@ -13,20 +13,20 @@
     "simplicite": "^3.0.1"
   },
   "devDependencies": {
-    "@ffflorian/jszip-cli": "^3.6.2",
+    "@ffflorian/jszip-cli": "^3.6.3",
     "acorn": "^8.11.3",
-    "css-loader": "^6.10.0",
-    "eslint": "^8.56.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^8.57.0",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
-    "npm-check-updates": "^16.14.15",
+    "npm-check-updates": "^16.14.20",
     "postcss-less": "^6.0.0",
-    "style-loader": "^3.3.4",
-    "stylelint": "^16.2.1",
+    "style-loader": "^4.0.0",
+    "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.0",
-    "webpack": "^5.90.3",
+    "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.2"
+    "webpack-dev-server": "^5.0.4"
   },
   "scripts": {
     "lint": "eslint src/**.js && stylelint src/**.less",

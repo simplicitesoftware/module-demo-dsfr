@@ -40,7 +40,7 @@ async function display() {
 	const list = await prd.search({ demoPrdAvailable: true }, { inlineDocuments: [ 'demoPrdPicture' ] });
 	let l = '';
 	for (const item of list) {
-		const img = item.demoPrdPicture ? `<img alt="Picture" src="data:${item.demoPrdPicture.mime};base64,${item.demoPrdPicture.content}"/>` : '';
+		const img = item.demoPrdPicture ? `<img alt="${item.demoPrdName}" src="data:${item.demoPrdPicture.mime};base64,${item.demoPrdPicture.content}"/>` : '';
 		l += `<div class="fr-col-sm-12 fr-col-md-6 fr-col-lg-4">\
 			<div class="fr-tile fr-enlarge-link fr-tile--horizontal">\
 				<div class="fr-tile__body">\
