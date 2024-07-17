@@ -28,7 +28,7 @@ module.exports = {
 		new webpack.DefinePlugin( {
 			process: {
 				env: {
-					WEBPACK_APP_URL: JSON.stringify('https://demo.dev.simplicite.io')
+					WEBPACK_APP_URL: JSON.stringify('https://demo.dev2.simplicite.io')
 				}
 			}
 		})
