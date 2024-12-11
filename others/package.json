@@ -30,9 +30,11 @@
     "webpack-dev-server": "^5.1.0"
   },
   "scripts": {
-    "lint": "eslint src/**.js && stylelint src/**.less",
+    "ncu": "ncu",
+    "eslint": "eslint src/**/*.js",
+    "stylelint": "stylelint src/**/*.less",
+    "lint": "npm run eslint && npm run stylelint",
     "start": "webpack serve --config=webpack.config.development.js",
-    "build": "webpack --config=webpack.config.production.js && rm -f ../resources/ObjectExternal/DemoDSFR/SITE.zip && cd public && jszip-cli add --ignore *.LICENSE.txt --output ../../resources/ObjectExternal/DemoDSFR/SITE.zip . && cd ..",
-    "ncu": "ncu"
+    "build": "npm run lint && webpack --config=webpack.config.production.js && rm -f ../resources/ObjectExternal/DemoDSFR/SITE.zip && cd public && jszip-cli add --ignore *.LICENSE.txt --output ../../resources/ObjectExternal/DemoDSFR/SITE.zip . && cd .."
   }
 }
