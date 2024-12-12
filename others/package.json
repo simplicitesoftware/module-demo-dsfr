@@ -9,32 +9,31 @@
     "url": "https://github.com/simplicitesoftware/web-demo.git"
   },
   "dependencies": {
-    "@gouvfr/dsfr": "^1.13.0",
-    "simplicite": "^3.0.3"
+    "@gouvfr/dsfr": "1.13.0",
+    "simplicite": "3.0.3"
   },
   "devDependencies": {
-    "@ffflorian/jszip-cli": "^3.8.2",
-    "acorn": "^8.14.0",
-    "css-loader": "^7.1.2",
-    "eslint": "^8.57.0",
+    "@eslint/js": "9.16.0",
+    "@ffflorian/jszip-cli": "3.8.2",
+    "css-loader": "7.1.2",
+    "eslint": "9.16.0",
     "globals": "15.13.0",
-    "less": "^4.2.1",
-    "less-loader": "^12.2.0",
-    "npm-check-updates": "^17.1.11",
-    "postcss-less": "^6.0.0",
-    "style-loader": "^4.0.0",
-    "stylelint": "^16.11.0",
-    "stylelint-config-standard": "^36.0.1",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "less": "4.2.1",
+    "less-loader": "12.2.0",
+    "npm-check-updates": "17.1.11",
+    "postcss-less": "6.0.0",
+    "style-loader": "4.0.0",
+    "stylelint": "16.11.0",
+    "stylelint-config-standard": "36.0.1",
+    "vite": "6.0.3"
   },
   "scripts": {
     "ncu": "ncu",
     "eslint": "eslint src/**/*.js",
     "stylelint": "stylelint src/**/*.less",
     "lint": "npm run eslint && npm run stylelint",
-    "start": "webpack serve --config=webpack.config.development.js",
-    "build": "npm run lint && webpack --config=webpack.config.production.js && rm -f ../resources/ObjectExternal/DemoDSFR/SITE.zip && cd public && jszip-cli add --ignore *.LICENSE.txt --output ../../resources/ObjectExternal/DemoDSFR/SITE.zip . && cd .."
+    "start": "vite --mode development",
+    "build": "npm run lint && vite --mode production build && rm -f ../resources/ObjectExternal/DemoDSFR/SITE.zip && cd public && jszip-cli add --ignore *.LICENSE.txt --output ../../resources/ObjectExternal/DemoDSFR/SITE.zip . && cd ..",
+    "serve": "vite preview"
   }
 }

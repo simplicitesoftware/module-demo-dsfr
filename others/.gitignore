@@ -1,7 +1,6 @@
 node_modules
-public/main-bundle.js*
-site.zip
-.scannerwork
+dist
+SITE.zip
 **.bak
 **.new
 **.tmp
