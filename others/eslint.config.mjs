@@ -16,8 +16,8 @@ export default [
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'no-multi-spaces': 'error',
       'no-trailing-spaces': ['error', { skipBlankLines: false }],
-      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-      'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+      'no-console': 'error',
+      'no-debugger': 'error'
     }
   }
 ];

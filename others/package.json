@@ -29,7 +29,7 @@
   },
   "scripts": {
     "ncu": "ncu",
-    "eslint": "eslint src/**/*.js",
+    "eslint": "eslint *.mjs src/**/*.js",
     "stylelint": "stylelint src/**/*.less",
     "lint": "npm run eslint && npm run stylelint",
     "start": "vite --mode development",
