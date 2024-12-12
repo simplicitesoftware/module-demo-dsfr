@@ -8,6 +8,8 @@
 'use strict';
 
 import './styles.less';
+import '@gouvfr/dsfr/dist/dsfr.min.css';
+
 import simplicite from 'simplicite';
 
 const app = simplicite.session(import.meta.env.VITE_DEMO_URL ? { url: import.meta.env.VITE_DEMO_URL, debug: true } : { debug: true });
