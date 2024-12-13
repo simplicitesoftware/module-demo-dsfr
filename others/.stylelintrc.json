@@ -1,6 +1,6 @@
 {
-	"extends": "stylelint-config-standard",
-	"customSyntax": "postcss-less",
+  "extends": "stylelint-config-standard",
+  "customSyntax": "postcss-less",
   "rules": {
     "rule-empty-line-before": "never",
     "declaration-empty-line-before": "never",
