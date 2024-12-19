@@ -18,7 +18,14 @@
 		<mdl_type>C</mdl_type>
 		<mdl_comment><![CDATA[### Introduction
 
-Demo examples for the [DSFR toolkit](https://www.systeme-de-design.gouv.fr)
+This modules contains a demo frontend example
+for the [DSFR toolkit](https://www.systeme-de-design.gouv.fr).
+
+The frontend itself is a Javascript application located in the `others` folder.
+
+### Prerequisites
+
+The `Demo` module **must** be installed and configured before importing this addon module.
 
 ### Import
 
@@ -99,7 +106,7 @@ This can be achieved by importing the following XML:
 		<usr_menu_defcollapsed>0</usr_menu_defcollapsed>
 		<usr_menu_defdomain_id.obd_name/>
 		<usr_logout>2023-12-19 13:38:51</usr_logout>
-		<usr_last_logon>2024-12-13 17:53:07</usr_last_logon>
+		<usr_last_logon>2024-12-17 10:15:59</usr_last_logon>
 		<usr_dateformat/>
 		<usr_numformat/>
 		<usr_lang_pref>FRA</usr_lang_pref>

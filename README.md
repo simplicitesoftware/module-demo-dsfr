@@ -13,7 +13,14 @@
 
 ### Introduction
 
-Demo examples for the [DSFR toolkit](https://www.systeme-de-design.gouv.fr)
+This modules contains a demo frontend example
+for the [DSFR toolkit](https://www.systeme-de-design.gouv.fr).
+
+The frontend itself is a Javascript application located in the `others` folder.
+
+### Prerequisites
+
+The `Demo` module **must** be installed and configured before importing this addon module.
 
 ### Import
 
