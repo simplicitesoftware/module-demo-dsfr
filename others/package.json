@@ -20,12 +20,12 @@
     "globals": "15.14.0",
     "less": "4.2.1",
     "less-loader": "12.2.0",
-    "npm-check-updates": "17.1.11",
+    "npm-check-updates": "17.1.13",
     "postcss-less": "6.0.0",
     "style-loader": "4.0.0",
     "stylelint": "16.12.0",
     "stylelint-config-standard": "36.0.1",
-    "vite": "6.0.4"
+    "vite": "6.0.7"
   },
   "scripts": {
     "ncu": "ncu",
