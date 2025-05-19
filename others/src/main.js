@@ -9,13 +9,16 @@
 
 import './styles.less';
 import '@gouvfr/dsfr/dist/dsfr.min.css';
+import '@gouvfr/dsfr/dist/utility/icons/icons-system/icons-system.css';
+import '@gouvfr/dsfr/dist/utility/icons/icons-user/icons-user.css';
 
 import simplicite from 'simplicite';
 
-const app = simplicite.session(import.meta.env.VITE_DEMO_URL ? { url: import.meta.env.VITE_DEMO_URL, debug: true } : { debug: true });
+const authtoken = sessionStorage.getItem('demo-authtoken');
+const endpoint = authtoken ? 'ui' : 'api';
 
+const app = simplicite.session(import.meta.env.VITE_DEMO_URL ? { url: import.meta.env.VITE_DEMO_URL, endpoint: endpoint, debug: true } : { endpoint: endpoint, debug: true });
 app.info(`Version: ${simplicite.constants.MODULE_VERSION}`);
-app.debug(app.parameters);
 
 let prd;
 
@@ -38,7 +41,23 @@ function error(err) {
     </div>`);
 }
 
-async function display() {
+function quit(url) {
+  sessionStorage.clear();
+  window.location.replace(url);
+}
+
+async function display(grant) {
+  if (authtoken) {
+    let b = elt('user');
+    b.innerHTML = `${grant.getFirstname()} ${grant.getLastname()}`;
+    b.style.display = 'flex';
+    b = elt('home');
+    b.style.display = 'flex';
+    b.onclick = () => quit('/ui?scope=Home');
+    b = elt('logout');
+    b.style.display = 'flex';
+    b.onclick = () => quit('/logout');
+  }
   const list = await prd.search({ demoPrdAvailable: true }, { inlineDocuments: [ 'demoPrdPicture' ] });
   let l = '';
   for (const item of list) {
@@ -55,26 +74,7 @@ async function display() {
     </div>`;
   }
   elt('products', `<div class="fr-grid-row fr-grid-row--gutters">${l}</div>`);
-}
-
-async function save() {
-  try {
-    elt('message', '');
-    await prd.save();
-    display();
-  } catch (err) { error(err); }
-}
-
-(async () => {
-  try {
-    const user = await app.login({ username: 'demodsfr', password: 'simplicite' });
-    app.debug(`Connecté en tant que ${user.login}`);
-    const grant = await app.getGrant();
-    app.debug(grant);
-    app.info(`Bonjour ${grant.getFirstname()} ${grant.getLastname()}`);
-    prd = app.getBusinessObject('DemoProduct');
-    const metadata = await prd.getMetaData();
-    app.debug(metadata);
+  if (prd.metadata.create) {
     elt('product-add').onclick = async () => {
       const item = await prd.getForCreate();
       app.debug(item);
@@ -90,6 +90,30 @@ async function save() {
       } else
         save();
     };
+    elt('product-form').style.display = 'block';
+  }
+}
+
+async function save() {
+  try {
+    elt('message', '');
+    await prd.save();
     display();
+  } catch (err) { error(err); }
+}
+
+(async () => {
+  try {
+    if (authtoken) {
+      const user = await app.login({ authtoken: authtoken });
+      app.debug(`Connecté en tant que ${user.login}`);
+    }
+    const grant = await app.getGrant();
+    app.debug('Grant', grant);
+    app.info(`Bonjour ${grant.getFirstname()} ${grant.getLastname()}`);
+    prd = app.getBusinessObject('DemoProduct');
+    const metadata = await prd.getMetaData();
+    app.debug('Product metadata', metadata);
+    display(grant);
   } catch (err) { error(err); }
 })();

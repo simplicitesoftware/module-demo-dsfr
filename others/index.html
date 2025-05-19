@@ -18,22 +18,29 @@
                         <div class="fr-header__brand-top">
                             <div class="fr-header__logo">
                                 <a href="/" title="Accueil - ministère des démos">
-                                    <p class="fr-logo">
-                                        Ministère
-                                        <br>des démos
-                                    </p>
+                                    <p class="fr-logo">Ministère<br>des démos</p>
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="fr-header__tools">
+                        <div class="fr-header__tools-links">
+                            <ul class="fr-btns-group">
+                                <li><a id="dsfr-demo-user" style="display: none;" class="fr-btn fr-icon-account-circle-line" href="#"></a></li>
+                                <li><a id="dsfr-demo-home" style="display: none;" class="fr-btn fr-icon-settings-5-line" href="#">Home</a></li>
+                                <li><a id="dsfr-demo-logout" style="display: none;" class="fr-btn fr-icon-lock-line" href="#">Se déconnecter</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <div id="dsfr-demo" class="fr-container">
+    <div class="fr-container">
         <h2><br/>Voici les produits :</h2>
         <div id="dsfr-demo-products">(Chargement...)</div>
-
+    </div>
+    <div id="dsfr-demo-product-form" style="display: none;" class="fr-container">
         <h2><br/>Pour créer un nouveau produit :</h2>
         <div id="dsfr-demo-message"></div>
         <div id="dsfr-demo-product" class="fr-grid-row fr-grid-row--gutters">
@@ -42,8 +49,8 @@
             <div class="fr-col-sm-12 fr-col-md-6 fr-col-lg-3"><input class="fr-upload" type="file" accept="image/*" id="dsfr-demo-product-picture"/></div>
             <div class="fr-col-sm-12 fr-col-md-6 fr-col-lg-3"><button class="fr-btn" id="dsfr-demo-product-add">Créer</button></div>
         </div>
-        <div class="fr-container">&nbsp;</div>
     </div>
+    <div class="fr-container">&nbsp;</div>
     <footer class="fr-footer" role="contentinfo" id="footer">
         <div class="fr-container fr-footer__bottom-copy">&copy; Simplicit&eacute; Software</div>
     </footer>
