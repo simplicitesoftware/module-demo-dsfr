@@ -67,10 +67,14 @@ async function display() {
     b.innerHTML = `${grant.getFirstName()} ${grant.getLastName()}`;
     b.style.display = 'flex';
 
-    if (grant.hasScope('Home')) {
-      b = elt('home');
-      b.style.display = 'flex';
-      b.onclick = () => quit('/ui?scope=Home');
+    // TODO: propose all user scopes
+    for (const scope of [ 'Home', 'DemoAdminHome', 'DemoUserHome' ]) {
+      if (grant.hasScope(scope)) {
+        b = elt('home', );
+        b.style.display = 'flex';
+        b.onclick = () => quit(`/ui?scope=${scope}`);
+        break;
+      }
     }
 
     b = elt('logout');
