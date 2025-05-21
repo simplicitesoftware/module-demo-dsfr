@@ -18,11 +18,11 @@ const sessionParams = { debug: true };
 if (import.meta.env.VITE_DEMO_URL)
   sessionParams.url = import.meta.env.VITE_DEMO_URL;
 
-const authtoken = sessionStorage.getItem('demo-dsfr-authtoken');
+const authtoken = sessionStorage.getItem('simplicite-ui-authtoken');
 if (authtoken) {
   sessionParams.endpoint = 'ui';
   sessionParams.authtoken = authtoken;
-  sessionParams.ajaxkey = sessionStorage.getItem('demo-dsfr-ajaxkey');
+  sessionParams.ajaxkey = sessionStorage.getItem('simplicite-ui-ajaxkey');
 } else
   sessionParams.endpoint = 'api';
 // eslint-disable-next-line no-console
@@ -53,8 +53,8 @@ function error(err) {
 }
 
 function quit(url) {
-  sessionStorage.removeItem('demo-dsfr-authtoken');
-  sessionStorage.removeItem('demo-dsfr-ajaxkey');
+  sessionStorage.removeItem('simplicite-ui-authtoken');
+  sessionStorage.removeItem('simplicite-ui-ajaxkey');
   window.location.replace(url);
 }
 
