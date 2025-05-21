@@ -18,11 +18,11 @@ const sessionParams = { debug: true };
 if (import.meta.env.VITE_DEMO_URL)
   sessionParams.url = import.meta.env.VITE_DEMO_URL;
 
-const authtoken = sessionStorage.getItem('simplicite-ui-authtoken');
+const authtoken = sessionStorage.getItem('_authtoken');
 if (authtoken) {
   sessionParams.endpoint = 'ui';
   sessionParams.authtoken = authtoken;
-  sessionParams.ajaxkey = sessionStorage.getItem('simplicite-ui-ajaxkey');
+  sessionParams.ajaxkey = sessionStorage.getItem('_ajaxkey');
 } else
   sessionParams.endpoint = 'api';
 // eslint-disable-next-line no-console
@@ -53,8 +53,8 @@ function error(err) {
 }
 
 function quit(url) {
-  sessionStorage.removeItem('simplicite-ui-authtoken');
-  sessionStorage.removeItem('simplicite-ui-ajaxkey');
+  sessionStorage.removeItem('_authtoken');
+  sessionStorage.removeItem('_ajaxkey');
   window.location.replace(url);
 }
 
