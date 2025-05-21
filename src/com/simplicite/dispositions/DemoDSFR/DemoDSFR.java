@@ -14,8 +14,10 @@ public class DemoDSFR extends com.simplicite.util.Disposition {
 	@Override
 	public String display(Parameters params) {
 		try {
+			AppLog.info("Token: " + getGrant().getAuthToken() + ", Ajax key: " + getGrant().getAjaxKey(), getGrant());
 			return HTMLTool.jsBlock(
-				"sessionStorage.setItem('demo-authtoken', '" + Tool.toJS(getGrant().getAuthToken()) + "');" +
+				"sessionStorage.setItem('demo-dsfr-authtoken', '" + Tool.toJS(getGrant().getAuthToken()) + "');" +
+				"sessionStorage.setItem('demo-dsfr-ajaxkey', '" + Tool.toJS(getGrant().getAjaxKey()) + "');" +
 				"document.location.replace('" + HTMLTool.getExternalObjectURL("DemoDSFR") + "/index.html');");
 		} catch (Exception e) {
 			AppLog.error(null, e, getGrant());
