@@ -29,8 +29,8 @@
   },
   "scripts": {
     "ncu": "ncu",
-    "eslint": "eslint *.mjs src/**/*.js",
-    "stylelint": "stylelint src/**/*.less",
+    "eslint": "eslint --fix \"*.mjs\" \"src/**/*.js\"",
+    "stylelint": "stylelint --fix \"src/**/*.less\"",
     "lint": "npm run eslint && npm run stylelint",
     "start": "vite --mode development",
     "build": "npm run lint && vite --mode production build && rm -f ../resources/ObjectExternal/DemoDSFR/SITE.zip && cd dist && jszip-cli add --output ../../resources/ObjectExternal/DemoDSFR/SITE.zip . && cd ..",
