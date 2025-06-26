@@ -14,17 +14,16 @@ import '@gouvfr/dsfr/dist/utility/icons/icons-user/icons-user.css';
 
 import simplicite from 'simplicite';
 
-const sessionParams = { debug: true };
+const sessionParams = { debug: !!import.meta.env.VITE_DEMO_DEBUG };
 if (import.meta.env.VITE_DEMO_URL)
   sessionParams.url = import.meta.env.VITE_DEMO_URL;
 
-const authtoken = sessionStorage.getItem('_authtoken');
+const authtoken = sessionStorage.getItem('_authToken');
 if (authtoken) {
-  sessionParams.endpoint = 'ui';
+  sessionParams.endpoint = simplicite.constants.ENDPOINT_UI;
   sessionParams.authtoken = authtoken;
-  sessionParams.ajaxkey = sessionStorage.getItem('_ajaxkey');
-} else
-  sessionParams.endpoint = 'api';
+  sessionParams.ajaxkey = sessionStorage.getItem('_ajaxKey');
+}
 // eslint-disable-next-line no-console
 console.log('Session parameters', sessionParams);
 
@@ -53,8 +52,8 @@ function error(err) {
 }
 
 function quit(url) {
-  sessionStorage.removeItem('_authtoken');
-  sessionStorage.removeItem('_ajaxkey');
+  sessionStorage.removeItem('_authToken');
+  sessionStorage.removeItem('_ajaxKey');
   window.location.replace(url);
 }
 
