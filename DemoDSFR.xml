@@ -82,8 +82,8 @@ This can be achieved by importing the following XML:
 	<data>
 		<dis_code>DemoDSFR</dis_code>
 		<dis_image/>
-		<dis_class/>
-		<dis_script_id>src/com/simplicite/dispositions/DemoDSFR/DemoDSFR.java</dis_script_id>
+		<dis_class>com.simplicite.webapp.web.StaticSiteExternalObjectDisposition</dis_class>
+		<dis_script_id/>
 		<row_module_id.mdl_name>DemoDSFR</row_module_id.mdl_name>
 	</data>
 </object>
