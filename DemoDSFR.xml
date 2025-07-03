@@ -188,10 +188,10 @@ This can be achieved by importing the following XML:
 		<obe_name>DemoDSFR</obe_name>
 		<obe_type>E</obe_type>
 		<obe_url/>
-		<obe_comment><![CDATA[Frontend using the DSFR toolkit]]></obe_comment>
+		<obe_comment><![CDATA[Public and private UI using the DSFR toolkit]]></obe_comment>
 		<obe_help/>
-		<obe_class/>
-		<obe_script_id>src/com/simplicite/extobjects/DemoDSFR/DemoDSFR.java</obe_script_id>
+		<obe_class>com.simplicite.webapp.web.StaticSiteExternalObject</obe_class>
+		<obe_script_id/>
 		<obe_icon/>
 		<row_module_id.mdl_name>DemoDSFR</row_module_id.mdl_name>
 	</data>

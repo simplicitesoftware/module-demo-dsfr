@@ -1,9 +1,9 @@
 {
-    "date": "2025-06-27 17:50:18",
+    "date": "2025-07-03 12:15:12",
     "name": "DemoDSFR",
     "format": "xml",
     "files": ["DemoDSFR.xml"],
     "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-demo-dsfr.git"}},
     "version": "5",
-    "platform": "5.3.73"
+    "platform": "5.3.74-preview"
 }

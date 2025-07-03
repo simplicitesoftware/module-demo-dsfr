@@ -64,6 +64,6 @@ This can be achieved by importing the following XML:
 `DemoDSFR` external object definition
 -------------------------------------
 
-Frontend using the DSFR toolkit
+Public and private UI using the DSFR toolkit
 
 
