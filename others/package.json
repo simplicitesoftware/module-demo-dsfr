@@ -20,7 +20,7 @@
     "globals": "16.4.0",
     "less": "4.4.1",
     "less-loader": "12.3.0",
-    "npm-check-updates": "18.3.0",
+    "npm-check-updates": "19.0.0",
     "postcss-less": "6.0.0",
     "style-loader": "4.0.0",
     "stylelint": "16.24.0",
