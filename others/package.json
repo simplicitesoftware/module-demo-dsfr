@@ -9,23 +9,23 @@
     "url": "https://github.com/simplicitesoftware/web-demo.git"
   },
   "dependencies": {
-    "@gouvfr/dsfr": "1.14.2",
+    "@gouvfr/dsfr": "1.14.3",
     "simplicite": "3.1.4"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.1",
-    "@ffflorian/jszip-cli": "3.11.2",
+    "@eslint/js": "9.39.2",
+    "@ffflorian/jszip-cli": "3.14.1",
     "css-loader": "7.1.2",
-    "eslint": "9.39.1",
-    "globals": "16.5.0",
-    "less": "4.4.2",
+    "eslint": "9.39.2",
+    "globals": "17.0.0",
+    "less": "4.5.1",
     "less-loader": "12.3.0",
-    "npm-check-updates": "19.1.2",
+    "npm-check-updates": "19.3.1",
     "postcss-less": "6.0.0",
     "style-loader": "4.0.0",
-    "stylelint": "16.25.0",
+    "stylelint": "16.26.1",
     "stylelint-config-standard": "39.0.1",
-    "vite": "7.2.4"
+    "vite": "7.3.1"
   },
   "scripts": {
     "ncu": "ncu",
