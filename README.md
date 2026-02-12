@@ -11,18 +11,21 @@
 `DemoDSFR` module definition
 ============================
 
-### Introduction
+Introduction
+------------
 
 This modules contains a demo frontend example
 for the [DSFR toolkit](https://www.systeme-de-design.gouv.fr).
 
 The frontend itself is a Javascript application located in the `others` folder.
 
-### Prerequisites
+Prerequisites
+-------------
 
 The `Demo` module **must** be installed and configured before importing this addon module.
 
-### Import
+Import
+------
 
 To import this module:
 
@@ -40,7 +43,8 @@ To import this module:
 
 - Click on the _Import module_ button
 
-### Configure
+Configure
+---------
 
 In order to have the frontend examples working the password for the
 webservices-only user `demodsfr` must be `simplicite`.
