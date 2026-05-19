@@ -14,18 +14,18 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@ffflorian/jszip-cli": "3.16.1",
+    "@ffflorian/jszip-cli": "3.16.2",
     "css-loader": "7.1.4",
-    "eslint": "10.3.0",
+    "eslint": "10.4.0",
     "globals": "17.6.0",
     "less": "4.6.4",
     "less-loader": "12.3.2",
-    "npm-check-updates": "22.1.1",
+    "npm-check-updates": "22.2.0",
     "postcss-less": "6.0.0",
     "style-loader": "4.0.0",
-    "stylelint": "17.11.0",
+    "stylelint": "17.11.1",
     "stylelint-config-standard": "40.0.0",
-    "vite": "8.0.11"
+    "vite": "8.0.13"
   },
   "scripts": {
     "ncu": "ncu",
