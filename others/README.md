@@ -12,7 +12,7 @@ Install
 -------
 
 ```bash
-npm install
+DSFR_ACCEPT_LICENSE=1 npm install
 ```
 
 Check syntax and rules
