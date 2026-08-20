@@ -22,8 +22,8 @@ Check syntax and rules
 npm run lint
 ```
 
-Run in developement mode
-------------------------
+Run in development mode
+-----------------------
 
 ```bash
 npm run start
